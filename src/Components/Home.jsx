@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-
+import { generateSlug } from '../libs/generateSlug';
 function Home() {
 
     const [title, setTitle] = useState("");
     const [slug, setSlug] = useState("");
     const [description, setDescription] = useState("")
-
-    const generateSlug = (title) => {
-        return title.toLowerCase().replace(/\s+/g, '-').slice(0, 50);
-      };
 
       function handleTitle(e) {
         const newTitle = e.target.value;
