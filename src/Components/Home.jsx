@@ -115,7 +115,7 @@ function Home() {
               <div className="mb-3">
               <p><em>Blog Content</em></p>
               {
-              parse('<li>Item 1</li><li>Item 2</li>')
+              parse(content)
               }
               </div>
             </div>
