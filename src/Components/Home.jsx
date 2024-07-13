@@ -38,7 +38,7 @@ function Home() {
               <h2 className="card-title">Blog Editor</h2>
               <form action="" onSubmit={handleSubmit}>
                 <div class="mb-3">
-                <label for="" class="form-label">Blog Ttile</label>
+                <label for="" class="form-label">Blog Title</label>
                 <input 
                     onChange={handleTitle}
                     type="text" 
@@ -86,20 +86,17 @@ function Home() {
             <div className="card-body border-left">
               <h2 className="card-title">Blog View</h2>
               <div class="mb-3">
-              <h2>{title}</h2>
+              <p><strong><em>Blog Title</em></strong></p>
+              <h2><strong>{title}</strong></h2>
               </div>
 
               <div class="mb-3">
-                <label for="" class="">Blog Slug</label>
-                <div className="border p-2 rounded">
-                    <p>{slug}</p>
-                </div>
+              <p><strong><em>Blog Slug</em></strong></p>
+              <p>{slug}</p>
               </div>
               <div class="mb-3">
-                <label for="" class="">Blog Description</label>
-                <div className="border p-2 rounded">
-                    <p>{description}</p>
-                </div>
+              <p><strong><em>Blog Description</em></strong></p>
+              <p>{description}</p>
               </div>
             </div>
           </div>
