@@ -64,7 +64,14 @@ function Home() {
                 <div class="mb-3">
                 <label for="" class="form-label">Blog Description</label>
                     <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="blogDescription"></textarea>
+                    <textarea 
+                    class="form-control" 
+                    placeholder="Leave a comment here" 
+                    id="blogDescription"
+                    onChange={(e) => setDescription(e.target.value)}
+                    >
+
+                    </textarea>
                     <label for="blogDescription">Description</label>
                     </div>
                 </div>
@@ -78,8 +85,21 @@ function Home() {
           <div className="col-md-6">
             <div className="card-body border-left">
               <h2 className="card-title">Blog View</h2>
-              <div className="border p-3" style={{ height: '100%' }}>
-                <p>This is where the blog view content will appear.</p>
+              <div class="mb-3">
+              <h2>{title}</h2>
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="">Blog Slug</label>
+                <div className="border p-2 rounded">
+                    <p>{slug}</p>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="" class="">Blog Description</label>
+                <div className="border p-2 rounded">
+                    <p>{description}</p>
+                </div>
               </div>
             </div>
           </div>
