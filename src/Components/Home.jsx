@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import React, { useState } from 'react'
@@ -110,6 +111,12 @@ function Home() {
               <div className="mb-3">
               <p><em>Blog Description</em></p>
               <p>{description}</p>
+              </div>
+              <div className="mb-3">
+              <p><em>Blog Content</em></p>
+              {
+              parse('<li>Item 1</li><li>Item 2</li>')
+              }
               </div>
             </div>
           </div>
