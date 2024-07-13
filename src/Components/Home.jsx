@@ -58,20 +58,20 @@ function Home() {
                     autoComplete='slug'
                     value = {slug}
                     class="form-control"
+                    disabled
                     // placeholder='Type the Course title'
                 />
                 </div>
                 <div class="mb-3">
                 <label for="" class="form-label">Blog Description</label>
                     <div class="form-floating">
-                    <textarea 
-                    class="form-control" 
-                    placeholder="Leave a comment here" 
-                    id="blogDescription"
-                    onChange={(e) => setDescription(e.target.value)}
-                    >
-
-                    </textarea>
+                    <textarea
+                                                className="form-control"
+                                                placeholder="Leave a comment here"
+                                                id="blogDescription"
+                                                onChange={(e) => setDescription(e.target.value)}
+                                                style={{ height: '200px' }} // Custom height for textarea
+                                            />
                     <label for="blogDescription">Description</label>
                     </div>
                 </div>
@@ -86,16 +86,16 @@ function Home() {
             <div className="card-body border-left">
               <h2 className="card-title">Blog View</h2>
               <div class="mb-3">
-              <p><strong><em>Blog Title</em></strong></p>
-              <h2><strong>{title}</strong></h2>
+              <p><em>Blog Title</em></p>
+              <h3><strong>{title}</strong></h3>
               </div>
 
               <div class="mb-3">
-              <p><strong><em>Blog Slug</em></strong></p>
+              <p><em>Blog Slug</em></p>
               <p>{slug}</p>
               </div>
               <div class="mb-3">
-              <p><strong><em>Blog Description</em></strong></p>
+              <p><em>Blog Description</em></p>
               <p>{description}</p>
               </div>
             </div>
