@@ -27,6 +27,31 @@ function Home() {
         console.log(newBlog)
     }
 
+    const modules = {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ["bold", "italic", "underline", "strike", "blockquote"],
+        [{ list: "ordered" }, { list: "bullet" }],
+        ["link", "color" , "image"],
+        [{ "code-block": true }],
+        ["clean"],
+      ],
+    };
+
+    const formats = [
+      "header",
+      "bold",
+      "italic",
+      "underline",
+      "strike",
+      "blockquote",
+      "list",
+      "bullet",
+      "link",
+      "image",
+      "code-block",
+    ];
+
     return (
     <div>
     <div className="container-fluid">
@@ -87,6 +112,8 @@ function Home() {
                 theme = "snow"
                 value = {content}
                 onChange={setContent}
+                modules={modules}
+                formats={formats}
                 />
                 </div>
 
